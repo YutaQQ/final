@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ไตรภูมิพระร่วง</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="images/logo.png" />
+    <style>
+      .top-right-button {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        padding: 10px 20px;
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .popup-img {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 80%;
+        max-height: 80%;
+        border: 2px solid #007BFF;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+      }
+      .go-to-level2 {
+        padding: 10px 20px;
+        background-color: #28a745;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+.go-to-level2:hover {
+  background-color: #218838;
+}
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="title">
+        <h1>ไตรภูมิพระร่วง 3/3</h1>
+      </div>
+
+      <div class="head">
+        <p>Moves: <span class="Moves">0</span></p>
+        <p class="timer">เวลา: <span id="countdown">00:45</span></p>
+        <button type="button" class="restert">Restart</button>
+      </div>
+
+      <div class="memory-game">
+        <!-- Memory cards go here -->
+        <!-- Card 1 -->
+        <div class="memory-card" data-category="Amoungus-1">
+          <img src="images/logo.png" alt="frontface" class="frontface" />
+          <img src="images3/peak.png" alt="backface" class="backface" />
+        </div>
+        <!-- Card 2 -->
+        <div class="memory-card" data-category="Amoungus-1">
+          <img src="images/logo.png" alt="frontface" class="frontface" />
+          <img src="images3/peak_s.png" alt="backface" class="backface" />
+        </div>
+        <!-- Card 3 -->
+        <div class="memory-card" data-category="Amoungus-2">
+          <img src="images/logo.png" alt="frontface" class="frontface" />
+          <img src="images3/peak2.png" alt="backface" class="backface" />
+        </div>
+        <!-- Card 4 -->
+        <div class="memory-card" data-category="Amoungus-2">
+          <img src="images/logo.png" alt="frontface" class="frontface" />
+          <img src="images3/peak2_s.png" alt="backface" class="backface" />
+        </div>
+        <!-- Card 5 -->
+        <div class="memory-card" data-category="Amoungus-3">
+          <img src="images/logo.png" alt="frontface" class="frontface" />
+          <img src="images3/001.png" alt="backface" class="backface" />
+        </div>
+        <!-- Card 6 -->
+        <div class="memory-card" data-category="Amoungus-3">
+          <img src="images/logo.png" alt="frontface" class="frontface" />
+          <img src="images3/001_s.png" alt="backface" class="backface" />
+        </div>
+        <!-- Card 7 -->
+        <div class="memory-card" data-category="Amoungus-4">
+          <img src="images/logo.png" alt="frontface" class="frontface" />
+          <img src="images3/002.png" alt="backface" class="backface" />
+        </div>
+        <!-- Card 8 -->
+        <div class="memory-card" data-category="Amoungus-4">
+          <img src="images/logo.png" alt="frontface" class="frontface" />
+          <img src="images3/002_ss.png" alt="backface" class="backface" />
+        </div>
+        <!-- Card 9 -->
+        <div class="memory-card" data-category="Amoungus-5">
+          <img src="images/logo.png" alt="frontface" class="frontface" />
+          <img src="images3/003.png" alt="backface" class="backface" />
+        </div>
+        <!-- Card 10 -->
+        <div class="memory-card" data-category="Amoungus-5">
+          <img src="images/logo.png" alt="frontface" class="frontface" />
+          <img src="images3/003_s.png" alt="backface" class="backface" />
+        </div>
+        <!-- Card 11 -->
+        <div class="memory-card" data-category="Amoungus-6">
+          <img src="images/logo.png" alt="frontface" class="frontface" />
+          <img src="images3/006.png" alt="backface" class="backface" />
+        </div>
+        <!-- Card 12 -->
+        <div class="memory-card" data-category="Amoungus-6">
+          <img src="images/logo.png" alt="frontface" class="frontface" />
+          <img src="images3/006_s.png" alt="backface" class="backface" />
+        </div>	
+      </div>
+    </div>
+
+    <div class="modal visibilty">
+      <div><h2>ยินดีด้วย!</h2></div>
+      <div>
+        <p>
+          คุณได้จบเกมนี้ภายใน <span class="move-model"></span> moves และ
+          <span class="second-model"></span> วินาที
+          <button class="go-to-level2" onclick="window.location.href='summerrize.html'">ไปที่ส่วนสรุป</button>
+        </p>
+      </div>
+    </div>
+    <div class="modal GameOver visibilty">
+      <div><h2>Game Over</h2></div>
+      <div><p>Time is over</p></div>
+      <button class="go-to-level2" onclick="window.location.href='summerrize.html'">ยอมแพ้แล้วไปที่ส่วนสรุปเลย!!</button>
+     
+
+    </div>
+    <div class="overlay visibilty"></div>
+
+    <div class="game-over-image">
+      
+    </div>
+    
+
+    <script src="script3.js "></script>
+  </body>
+</html>
