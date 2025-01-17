@@ -178,7 +178,7 @@ h1 {
 	position: absolute;
 	width: 70%; /* Set width as a percentage of the viewport width */
 	max-width: 250px; /* Keep the max width as 250px */
-	left: 10%; /* Center the image horizontally */	
+	left: 0; /* Center the image horizontally */	
 	height: auto;
 }
 
