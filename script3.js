@@ -16,7 +16,7 @@ let firstCard, secondCard;
 let firstBackFace, secondBackFace;
 let randomPos;
 let movesCount = 0;
-let startingMinutes = 1; // Starting time in minutes
+let startingMinutes = 0.5; // Starting time in minutes
 let time = startingMinutes * 10 ;// Time in seconds (initial
 let interval;
 let correctMatches = 0;
